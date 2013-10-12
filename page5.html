@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Contact Us | Organic Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link href="css/styles.css" rel="stylesheet">
+
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <div data-role="page" data-control-title="Contact Us" id="page5">
+      <div data-role="panel" id="panel8" data-position="left" data-display="reveal" data-theme="d">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Sections
+              </li>
+              <li data-theme="d">
+                  <a href="index.html" data-transition="slide">
+                      Home
+                  </a>
+              </li>
+              <li data-theme="d">
+                  <a href="page6.html" data-transition="slide">
+                      Recipe
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-role="panel" id="panel7" data-position="left" data-display="reveal" data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Sections
+              </li>
+              <li data-theme="a">
+                  <a href="" data-transition="slide">
+                      Button
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="d" data-role="header">
+          <a data-role="button" href="index.html" data-icon="home" data-iconpos="notext" class="ui-btn-right">
+          </a>
+          <a data-controltype="panelbutton" data-role="button" href="#panel8" data-icon="bars" data-iconpos="notext" class="ui-btn-left">
+          </a>
+          <h3>
+              Contact Us
+          </h3>
+      </div>
+      <div data-role="content">
+          <div id="googlemapsjs1" class="google-map" style="width: 288px; height: 200px; margin-left: auto; margin-right: auto">
+          </div>
+          <script type="text/javascript">
+                  window.OrganicControls && window.OrganicControls.register('googlemaps', 'googlemapsjs1', {
+              ready: function(control) {
+  
+                  control.options = {
+                      zoom: 14,
+                      mapTypeId: google.maps.MapTypeId.ROADMAP
+                  };
+  
+                  control.el = document.getElementById(control._id);
+                  control.map = new google.maps.Map(control.el, control.options);
+  
+                  var geocoder = new google.maps.Geocoder();
+                  geocoder.geocode({
+                      'address': '20th Ave Brooklyn, NY 11204 ('
+                  }, function(results, status) {
+                      if (status == google.maps.GeocoderStatus.OK) {
+  
+                          var marker = new google.maps.Marker({
+                              map: control.map,
+                              position: results[0].geometry.location
+                          });
+                          control.center = results[0].geometry.location;
+                          control.map.setCenter(control.center);
+                      }
+                  });
+  
+              }
+          });
+          </script>
+          <div data-controltype="textblock">
+              <p>
+                  <span>
+                      Random Address,
+                      <br/>
+                  </span>
+                  Brooklyn, NY 11204
+              </p>
+          </div>
+          <ul data-role="listview" data-divider-theme="d" data-inset="true">
+              <li data-role="list-divider" role="heading">
+                  Hours
+              </li>
+              <li data-theme="c">
+                  Monday - Friday: 9am - 7pm
+              </li>
+              <li data-theme="c">
+                  Saturday: 10am - 6pm
+              </li>
+              <li data-theme="c">
+                  Sunday: Closed
+              </li>
+          </ul>
+      </div>
+  </div>
+</body>
+</html>
