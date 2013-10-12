@@ -6,4 +6,4 @@ Use "data-theme" to change themes instantly or use the lovely <a href="http://jq
 
 Below are some screenshots that may help you visualise your project.
 
-![](assets/photo 1.png?raw=true)![](assets/photo 2.png?raw=true)![](assets/photo 3.png?raw=true)![](assets/photo 4.png?raw=true)
+![](assets/photo%201.PNG?raw=true)![](assets/photo%202.PNG?raw=true)![](assets/photo%203.PNG?raw=true)![](assets/photo%204.PNG?raw=true)
